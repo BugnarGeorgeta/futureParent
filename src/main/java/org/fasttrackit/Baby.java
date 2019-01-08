@@ -4,8 +4,16 @@ public class Baby extends Child {
 
     int ageInDays;
     int howCleanIs;
-    Food food;
     Diapers diaper;
-    Play play;
 
+
+
+    public Baby(Food food) {
+        super(food);
+
+    }
+
+    public Baby(Play play) {
+        super(play);
+    }
 }

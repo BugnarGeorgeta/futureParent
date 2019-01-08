@@ -7,6 +7,7 @@ public class App
 {
     public static void main( String[] args )
     {
+
        Baby baby = new Baby();
        baby.name = "Amalia";
        baby.ageInDays = 15;
