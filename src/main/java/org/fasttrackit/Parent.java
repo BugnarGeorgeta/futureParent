@@ -1,8 +1,7 @@
 package org.fasttrackit;
 
-public class Parent {
+public class Parent extends People {
 
-    String name;
     int age;
     boolean hasOtherChildren;
     int energyLevel;
