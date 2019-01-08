@@ -1,15 +1,9 @@
 package org.fasttrackit;
 
-public class Baby {
-    String name;
-    int ageInDays;
-    int healthCondition;
-    int levelOfMood;
-    String nameOfFood;
-    boolean isCrying;
-    String favoriteGame;
-    int howCleanIs;
+public class Baby extends Child {
 
+    int ageInDays;
+    int howCleanIs;
     BabyResources resources;
     Diapers diaper;
 

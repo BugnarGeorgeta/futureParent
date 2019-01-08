@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 public class Parent {
+
     String name;
     int age;
     boolean hasOtherChildren;

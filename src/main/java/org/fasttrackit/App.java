@@ -1,7 +1,9 @@
 package org.fasttrackit;
 
 
-public class App 
+import java.time.LocalDateTime;
+
+public class App
 {
     public static void main( String[] args )
     {
@@ -10,10 +12,8 @@ public class App
        baby.ageInDays = 15;
        baby.healthCondition = 10;
        baby.levelOfMood = 7;
-       baby.nameOfFood = "milk";
        baby.isCrying = false;
        baby.favoriteGame = "toy with lights";
-
        baby.howCleanIs = 8;
 
        Parent parent = new Parent();
@@ -29,7 +29,7 @@ public class App
        food.price = 25.5;
        food.amount = 2;
        food.isInStock = true;
-       food.foodExpirationDate = 31102019;
+       food.foodExpirationDate = LocalDateTime.now().plusYears(2);
 
        Diapers diaper = new Diapers();
        diaper.manufacturer = "Huggies";
@@ -49,8 +49,10 @@ public class App
 
        BabyResources resources = new BabyResources();
        resources.feelingHungry = 3;
+       resources.nameOfFood = "milk";
 
        baby.resources.feelingHungry = 4;
+       baby.resources.nameOfFood = "milk";
 
 
 
