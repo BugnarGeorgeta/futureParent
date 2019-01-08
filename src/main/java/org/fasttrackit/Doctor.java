@@ -1,7 +1,7 @@
 package org.fasttrackit;
 
-public class Doctor {
-    String name;
+public class Doctor extends People{
+
     String specialization;
     boolean isAvailable;
 }

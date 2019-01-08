@@ -16,6 +16,7 @@ public class App
        baby.isCrying = false;
        baby.favoriteGame = "toy with lights";
        baby.howCleanIs = 8;
+       baby.sex = "male";
 
        Parent parent = new Parent();
        parent.name = "Geta";
@@ -24,6 +25,7 @@ public class App
        parent.energyLevel = 6;
        parent.moneyAvailable = 2000;
        parent.somebodyElseHelps = false;
+       parent.sex ="female";
 
        Food food = new Food();
 
@@ -52,6 +54,7 @@ public class App
        dr.name = "Inceu";
        dr.specialization = " pediatrics";
        dr.isAvailable = true;
+       dr.sex = "female";
 
 
 
