@@ -4,7 +4,8 @@ public class Baby extends Child {
 
     int ageInDays;
     int howCleanIs;
-    BabyResources resources;
+    Food food;
     Diapers diaper;
+    Play play;
 
 }

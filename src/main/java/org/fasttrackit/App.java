@@ -25,11 +25,15 @@ public class App
        parent.somebodyElseHelps = false;
 
        Food food = new Food();
-       food.name = "milk";
+
        food.price = 25.5;
        food.amount = 2;
        food.isInStock = true;
+       food.feelingHungry = 3;
+       food.nameOfFood= "milk";
        food.foodExpirationDate = LocalDateTime.now().plusYears(2);
+
+       baby.food.nameOfFood ="milk";
 
        Diapers diaper = new Diapers();
        diaper.manufacturer = "Huggies";
@@ -41,18 +45,18 @@ public class App
 
        Play play = new Play();
        play.name = "cucu-bau";
+       baby.play.name = "teddy bear";
 
        Doctor dr = new Doctor();
        dr.name = "Inceu";
        dr.specialization = " pediatrics";
        dr.isAvailable = true;
 
-       BabyResources resources = new BabyResources();
-       resources.feelingHungry = 3;
-       resources.nameOfFood = "milk";
 
-       baby.resources.feelingHungry = 4;
-       baby.resources.nameOfFood = "milk";
+
+
+
+
 
 
 
