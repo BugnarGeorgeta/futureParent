@@ -9,23 +9,22 @@ public class App
     {
 
        Baby baby = new Baby();
-       baby.name = "Amalia";
-       baby.ageInDays = 15;
-       baby.healthCondition = 10;
-       baby.levelOfMood = 7;
-       baby.isCrying = false;
-       baby.favoriteGame = "toy with lights";
-       baby.howCleanIs = 8;
-       baby.sex = "male";
+       baby.setName("Matei");
+       baby.setAgeInDays(15);
+       baby.setHealthCondition(10);
+       baby.setLevelOfMood(7);
+       baby.setFavoriteGame("toy with lights");
+       baby.setHowCleanIs(8);
+       baby.setSex("male");
 
        Parent parent = new Parent();
-       parent.name = "Geta";
-       parent.age = 30;
-       parent.hasOtherChildren = false;
-       parent.energyLevel = 6;
-       parent.moneyAvailable = 2000;
-       parent.somebodyElseHelps = false;
-       parent.sex ="female";
+       parent.setName("Geta");
+       parent.setAge(30);
+       parent.setHasOtherChildren(false);
+       parent.setEnergyLevel(6);
+       parent.setMoneyAvailable(2000);
+       parent.setSomebodyElseHelps(false);
+       parent.setSex("female");
 
        Food food = new Food();
 
@@ -36,7 +35,7 @@ public class App
        food.nameOfFood= "milk";
        food.foodExpirationDate = LocalDateTime.now().plusYears(2);
 
-       baby.food.nameOfFood ="milk";
+       baby.food.nameOfFood = "milk" ;
 
        Diapers diaper = new Diapers();
        diaper.manufacturer = "Huggies";
@@ -51,10 +50,10 @@ public class App
        baby.play.name = "teddy bear";
 
        Doctor dr = new Doctor();
-       dr.name = "Inceu";
-       dr.specialization = " pediatrics";
-       dr.isAvailable = true;
-       dr.sex = "female";
+       dr.setName("Inceu");
+       dr.setSpecialization(" pediatrics");
+       dr.setAvailable(true);
+       dr.setSex("female");
 
 
 

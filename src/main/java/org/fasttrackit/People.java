@@ -2,7 +2,22 @@ package org.fasttrackit;
 
 public class People {
 
-    public String name;
-    public String sex;
+    private String name;
+    private String sex;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 }
