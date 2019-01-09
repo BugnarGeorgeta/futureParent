@@ -55,6 +55,10 @@ public class App
         baby.setHowCleanIs(8);
         baby.setSex("male");
 
+        parent.feed("Amalia","apple");
+        parent.playing("Matei", "cucu-bau");
+
+
 
 
 

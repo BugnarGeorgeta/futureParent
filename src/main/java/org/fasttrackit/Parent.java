@@ -47,4 +47,6 @@ public class Parent extends People {
     public void setSomebodyElseHelps(boolean somebodyElseHelps) {
         this.somebodyElseHelps = somebodyElseHelps;
     }
+
+
 }

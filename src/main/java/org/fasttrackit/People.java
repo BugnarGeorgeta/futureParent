@@ -20,4 +20,11 @@ public class People {
     public void setSex(String sex) {
         this.sex = sex;
     }
+
+    public void feed(String baby,String food){
+        System.out.println( getName() + " just gave some " + food + " food to " + baby + ".");
+    }
+    public void playing(String baby,String play){
+        System.out.println( getName() + " just played " + play + " with " + baby + ".");
+    }
 }
