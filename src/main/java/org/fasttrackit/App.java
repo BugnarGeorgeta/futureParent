@@ -8,15 +8,6 @@ public class App
     public static void main( String[] args )
     {
 
-       Baby baby = new Baby();
-       baby.setName("Matei");
-       baby.setAgeInDays(15);
-       baby.setHealthCondition(10);
-       baby.setLevelOfMood(7);
-       baby.setFavoriteGame("toy with lights");
-       baby.setHowCleanIs(8);
-       baby.setSex("male");
-
        Parent parent = new Parent();
        parent.setName("Geta");
        parent.setAge(30);
@@ -35,7 +26,7 @@ public class App
        food.nameOfFood= "milk";
        food.foodExpirationDate = LocalDateTime.now().plusYears(2);
 
-       baby.food.nameOfFood = "milk" ;
+
 
        Diapers diaper = new Diapers();
        diaper.manufacturer = "Huggies";
@@ -43,17 +34,31 @@ public class App
        diaper.amount = 56;
        diaper.levelHumidityPampers = 2;
 
-       baby.diaper.levelHumidityPampers = 3;
+
 
        Play play = new Play();
        play.name = "cucu-bau";
-       baby.play.name = "teddy bear";
+
 
        Doctor dr = new Doctor();
        dr.setName("Inceu");
        dr.setSpecialization(" pediatrics");
        dr.setAvailable(true);
        dr.setSex("female");
+
+        Baby baby = new Baby(food);
+        baby.setName("Matei");
+        baby.setAgeInDays(15);
+        baby.setHealthCondition(10);
+        baby.setLevelOfMood(7);
+        baby.setFavoriteGame("toy with lights");
+        baby.setHowCleanIs(8);
+        baby.setSex("male");
+
+        baby.food.nameOfFood = "milk" ;
+        baby.diaper.levelHumidityPampers = 3;
+        baby.play.name = "teddy bear";
+
 
 
 
