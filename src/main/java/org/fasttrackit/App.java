@@ -55,9 +55,7 @@ public class App
         baby.setHowCleanIs(8);
         baby.setSex("male");
 
-        baby.food.nameOfFood = "milk" ;
-        baby.diaper.levelHumidityPampers = 3;
-        baby.play.name = "teddy bear";
+
 
 
 
