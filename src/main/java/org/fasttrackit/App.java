@@ -19,20 +19,20 @@ public class App
 
        Food food = new Food();
 
-       food.price = 25.5;
-       food.amount = 2;
-       food.isInStock = true;
-       food.feelingHungry = 3;
-       food.nameOfFood= "milk";
+       food.setPrice(25.5);
+       food.setAmount(2);
+       food.setInStock(true);
+       food.setFeelingHungry(3);
+       food.setNameOfFood("milk");
        food.foodExpirationDate = LocalDateTime.now().plusYears(2);
 
 
 
        Diapers diaper = new Diapers();
-       diaper.manufacturer = "Huggies";
-       diaper.price = 1.3;
-       diaper.amount = 56;
-       diaper.levelHumidityPampers = 2;
+       diaper.setManufacturer("Huggies");
+       diaper.setPrice(1.3);
+       diaper.setAmount(56);
+       diaper.setLevelHumidityPampers(2);
 
 
 

@@ -4,10 +4,58 @@ import java.time.LocalDateTime;
 
 public class Food {
 
-    double price;
-    double amount;
-    boolean isInStock;
-    int feelingHungry;
-    String nameOfFood;
     LocalDateTime foodExpirationDate;
+    private double price;
+    private double amount;
+    private boolean isInStock;
+    private int feelingHungry;
+    private String nameOfFood;
+
+    public LocalDateTime getFoodExpirationDate() {
+        return foodExpirationDate;
+    }
+
+    public void setFoodExpirationDate(LocalDateTime foodExpirationDate) {
+        this.foodExpirationDate = foodExpirationDate;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public boolean isInStock() {
+        return isInStock;
+    }
+
+    public void setInStock(boolean inStock) {
+        isInStock = inStock;
+    }
+
+    public int getFeelingHungry() {
+        return feelingHungry;
+    }
+
+    public void setFeelingHungry(int feelingHungry) {
+        this.feelingHungry = feelingHungry;
+    }
+
+    public String getNameOfFood() {
+        return nameOfFood;
+    }
+
+    public void setNameOfFood(String nameOfFood) {
+        this.nameOfFood = nameOfFood;
+    }
 }
