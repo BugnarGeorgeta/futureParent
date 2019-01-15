@@ -16,6 +16,10 @@ public class Child extends People {
         this.play = play;
     }
 
+    public void mood(){
+        System.out.println("The child is happy.");
+    }
+
     public int getLevelOfMood() {
         return levelOfMood;
     }

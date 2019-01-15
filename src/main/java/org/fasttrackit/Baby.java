@@ -16,6 +16,11 @@ public class Baby extends Child {
         super(play);
     }
 
+    @Override
+    public void mood() {
+        System.out.println("The baby laughs, he is happy.");
+    }
+
     public int getAgeInDays() {
         return ageInDays;
     }

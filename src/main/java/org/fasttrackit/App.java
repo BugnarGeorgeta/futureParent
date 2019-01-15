@@ -58,6 +58,10 @@ public class App
         parent.feed("Amalia","apple");
         parent.playing("Matei", "cucu-bau");
 
+        baby.mood();
+
+
+
 
 
 
