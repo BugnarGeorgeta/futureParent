@@ -55,7 +55,7 @@ public class App
         baby.setHowCleanIs(8);
         baby.setSex("male");
 
-        Child baby1 = new Baby(food);
+        Child baby1 = new Baby(play);
         baby1.mood();
 
 
