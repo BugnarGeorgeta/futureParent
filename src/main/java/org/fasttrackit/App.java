@@ -55,10 +55,15 @@ public class App
         baby.setHowCleanIs(8);
         baby.setSex("male");
 
+        Child baby1 = new Baby(food);
+        baby1.mood();
+
+
         parent.feed("Amalia","apple");
         parent.playing("Matei", "cucu-bau");
 
         baby.mood();
+
 
 
 

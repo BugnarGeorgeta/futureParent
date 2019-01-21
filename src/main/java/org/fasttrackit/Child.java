@@ -44,6 +44,15 @@ public class Child extends People {
         this.favoriteGame = favoriteGame;
     }
 
-
+    @Override
+    public String toString() {
+        return "Child{" +
+                "levelOfMood=" + levelOfMood +
+                ", healthCondition=" + healthCondition +
+                ", favoriteGame='" + favoriteGame + '\'' +
+                ", food=" + food +
+                ", play=" + play +
+                '}';
+    }
 }
 
