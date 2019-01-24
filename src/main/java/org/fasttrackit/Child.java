@@ -5,6 +5,7 @@ public class Child extends People {
     private int levelOfMood;
     private int healthCondition;
     private String favoriteGame;
+    private int feelingHungry;
 
     public Food food;
     public Play play;
@@ -18,6 +19,20 @@ public class Child extends People {
 
     public void mood(){
         System.out.println("The child is happy.");
+    }
+
+    @Override
+    public void feed(String baby, String food) {
+        super.feed(baby, food);
+        feelingHungry--;
+        System.out.println("Now the level of mood is: " + feelingHungry);
+    }
+
+    @Override
+    public void playing(String baby, String play) {
+        super.playing(baby, play);
+        levelOfMood++;
+        System.out.println("Now the level of mood is: " + levelOfMood);
     }
 
     public int getLevelOfMood() {
@@ -36,6 +51,14 @@ public class Child extends People {
         this.healthCondition = healthCondition;
     }
 
+    public int getFeelingHungry() {
+        return feelingHungry;
+    }
+
+    public void setFeelingHungry(int feelingHungry) {
+        this.feelingHungry = feelingHungry;
+    }
+
     public String getFavoriteGame() {
         return favoriteGame;
     }
@@ -43,6 +66,7 @@ public class Child extends People {
     public void setFavoriteGame(String favoriteGame) {
         this.favoriteGame = favoriteGame;
     }
+
 
     @Override
     public String toString() {

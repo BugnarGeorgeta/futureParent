@@ -8,7 +8,7 @@ public class Food {
     private double price;
     private double amount;
     private boolean isInStock;
-    private int feelingHungry;
+
     private String nameOfFood;
 
     public LocalDateTime getFoodExpirationDate() {
@@ -43,13 +43,6 @@ public class Food {
         isInStock = inStock;
     }
 
-    public int getFeelingHungry() {
-        return feelingHungry;
-    }
-
-    public void setFeelingHungry(int feelingHungry) {
-        this.feelingHungry = feelingHungry;
-    }
 
     public String getNameOfFood() {
         return nameOfFood;

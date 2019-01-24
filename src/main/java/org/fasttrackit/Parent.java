@@ -8,6 +8,7 @@ public class Parent extends People {
     private int moneyAvailable;
     private boolean somebodyElseHelps;
 
+
     public int getAge() {
         return age;
     }
