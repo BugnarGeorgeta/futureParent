@@ -9,6 +9,22 @@ public class Parent extends People {
     private boolean somebodyElseHelps;
 
 
+    public void feed(Baby baby,Food food){
+        System.out.println( getName() + " just gave some " + food.getNameOfFood() + " food to " + baby.getName() + ".");
+        int hungry = baby.getFeelingHungry();
+        hungry--;
+        System.out.println("Now the level of hungry is: " + hungry);
+
+    }
+
+    public void playing(Baby baby,Play play){
+        System.out.println( getName() + " just played " + play.getName() + " with " + baby.getName() + ".");
+        int mood = baby.getLevelOfMood();
+        mood++;
+        System.out.println("Now the level of mood is: " + mood);
+    }
+
+
     public int getAge() {
         return age;
     }

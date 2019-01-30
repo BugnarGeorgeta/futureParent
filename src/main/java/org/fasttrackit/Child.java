@@ -21,19 +21,6 @@ public class Child extends People {
         System.out.println("The child is happy.");
     }
 
-    @Override
-    public void feed(String baby, String food) {
-        super.feed(baby, food);
-        feelingHungry--;
-        System.out.println("Now the level of mood is: " + feelingHungry);
-    }
-
-    @Override
-    public void playing(String baby, String play) {
-        super.playing(baby, play);
-        levelOfMood++;
-        System.out.println("Now the level of mood is: " + levelOfMood);
-    }
 
     public int getLevelOfMood() {
         return levelOfMood;

@@ -32,7 +32,7 @@ public class App {
 
 
         Play play = new Play();
-        play.name = "cucu-bau";
+        play.setName("cucu-bau");
 
 
         Doctor dr = new Doctor();
@@ -55,13 +55,14 @@ public class App {
         //baby1.mood();
        //baby.feed("Matei","milk");
         baby.setFeelingHungry(3);
+        parent.feed(baby,food);
+        parent.playing(baby,play);
 
 
 
        //parent.playing("Matei", "cucu-bau");
       // parent.feed("Matey","egg");
-       baby.feed("Ana","milk");
-       baby.playing("Ana","cucu-bau");
+
 
        // baby.mood();
 
