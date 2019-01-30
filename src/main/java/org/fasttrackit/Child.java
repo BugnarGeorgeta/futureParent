@@ -6,6 +6,7 @@ public class Child extends People {
     private int healthCondition;
     private String favoriteGame;
     private int feelingHungry;
+    private String favoriteFood;
 
     public Food food;
     public Play play;
@@ -54,6 +55,13 @@ public class Child extends People {
         this.favoriteGame = favoriteGame;
     }
 
+    public String getFavoriteFood() {
+        return favoriteFood;
+    }
+
+    public void setFavoriteFood(String favoriteFood) {
+        this.favoriteFood = favoriteFood;
+    }
 
     @Override
     public String toString() {

@@ -20,7 +20,7 @@ public class App {
         food.setPrice(25.5);
         food.setAmount(2);
         food.setInStock(true);
-        food.setNameOfFood("milk");
+        food.setNameOfFood("mango");
         food.foodExpirationDate = LocalDateTime.now().plusYears(2);
 
 
@@ -32,7 +32,7 @@ public class App {
 
 
         Play play = new Play();
-        play.setName("cucu-bau");
+        play.setName("toy with lights");
 
 
         Doctor dr = new Doctor();
@@ -49,6 +49,7 @@ public class App {
         baby.setFavoriteGame("toy with lights");
         baby.setHowCleanIs(8);
         baby.setSex("male");
+        baby.setFavoriteFood("mango");
 
 
         Child baby1 = new Baby(play);

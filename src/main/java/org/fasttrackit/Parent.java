@@ -15,13 +15,24 @@ public class Parent extends People {
         hungry--;
         System.out.println("Now the level of hungry is: " + hungry);
 
+        if( food.getNameOfFood() == baby.getFavoriteFood()){
+            int happy =baby.getLevelOfMood();
+            happy++;
+            System.out.println("Now the level of mood is: " + happy);
+        }
     }
 
-    public void playing(Baby baby,Play play){
-        System.out.println( getName() + " just played " + play.getName() + " with " + baby.getName() + ".");
+    public void playing(Baby baby,Play play) {
+        System.out.println(getName() + " just played " + play.getName() + " with " + baby.getName() + ".");
         int mood = baby.getLevelOfMood();
-        mood++;
-        System.out.println("Now the level of mood is: " + mood);
+
+        if (play.getName() == baby.getFavoriteGame()) {
+            mood = mood + 2;
+            System.out.println("Now the level of mood is: " + mood);
+        } else {
+            mood++;
+            System.out.println("Now the level of mood is: " + mood);
+        }
     }
 
 
