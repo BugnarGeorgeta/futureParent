@@ -31,7 +31,7 @@ public class App {
         diaper.setLevelHumidityPampers(2);
 
 
-        Play play = new Play();
+        Play play = new Play("cucu");
         play.setName("toy with lights");
 
 
@@ -58,6 +58,10 @@ public class App {
         baby.setFeelingHungry(3);
         parent.feed(baby,food);
         parent.playing(baby,play);
+
+        Game game = new Game();
+        game.start();
+
 
 
 
