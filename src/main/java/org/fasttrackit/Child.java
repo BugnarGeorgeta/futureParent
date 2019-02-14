@@ -11,12 +11,12 @@ public class Child extends People {
     public Food food;
     public Play play;
 
-    public Child(Food food){
-        this.food = food;
-    }
-    public Child(Play play){
-        this.play = play;
-    }
+   //public Child(Food food){
+   //     this.food = food;
+  //  }
+  //  public Child(Play play){
+  //      this.play = play;
+   // }
 
     public void mood(){
         System.out.println("The child is happy.");

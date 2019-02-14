@@ -9,14 +9,15 @@ public class Baby extends Child {
 
 
 
-    public Baby(Food food) {
-        super(food);
+   // public Baby(Food food) {
+   //     super(food);
 
-    }
+   // }
 
-    public Baby(Play play) {
-        super(play);
-    }
+
+    //  public Baby(Play play) {
+    //    super(play);
+  //  }
 
     @Override
     public void mood() {
@@ -38,4 +39,5 @@ public class Baby extends Child {
     public void setHowCleanIs(int howCleanIs) {
         this.howCleanIs = howCleanIs;
     }
+
 }

@@ -41,7 +41,7 @@ public class App {
         dr.setAvailable(true);
         dr.setSex("female");
 
-        Baby baby = new Baby(food);
+        Baby baby = new Baby();
         baby.setName("Matei");
         baby.setAgeInDays(15);
         baby.setHealthCondition(10);
@@ -52,7 +52,7 @@ public class App {
         baby.setFavoriteFood("mango");
 
 
-        Child baby1 = new Baby(play);
+        Child baby1 = new Baby();
         //baby1.mood();
        //baby.feed("Matei","milk");
         baby.setFeelingHungry(3);
