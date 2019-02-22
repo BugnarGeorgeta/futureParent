@@ -1,8 +1,6 @@
 package org.fasttrackit;
 
 
-import java.time.LocalDateTime;
-
 public class App {
     public static void main(String[] args) {
 
@@ -15,13 +13,13 @@ public class App {
         parent.setSomebodyElseHelps(false);
         parent.setSex("female");
 
-        Food food = new Food();
+     //   Food food = new Food();
 
-        food.setPrice(25.5);
-        food.setAmount(2);
-        food.setInStock(true);
-        food.setNameOfFood("mango");
-        food.foodExpirationDate = LocalDateTime.now().plusYears(2);
+    //    food.setPrice(25.5);
+     //   food.setAmount(2);
+    //    food.setInStock(true);
+    //    food.setNameOfFood("mango");
+    //    food.foodExpirationDate = LocalDateTime.now().plusYears(2);
 
 
         Diapers diaper = new Diapers();
@@ -52,12 +50,12 @@ public class App {
         baby.setFavoriteFood("mango");
 
 
-        Child baby1 = new Baby();
+     //   Child baby1 = new Baby();
         //baby1.mood();
        //baby.feed("Matei","milk");
-        baby.setFeelingHungry(3);
-        parent.feed(baby,food);
-        parent.playing(baby,play);
+      //  baby.setFeelingHungry(3);
+     //   parent.feed(baby,food);
+     //   parent.playing(baby,play);
 
         Game game = new Game();
         game.start();

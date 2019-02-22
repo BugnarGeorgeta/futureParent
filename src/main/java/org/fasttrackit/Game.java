@@ -6,32 +6,46 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Game {
+
     private List<Food> availableFood = new ArrayList<>();
     private Play[] availableActivities = new Play[5];
 
     public void start() {
-        initChild();
         initParent();
         nameBaby();
+        initChild();
         initFood(2);
         displayFood();
         requireFeeding();
-        initActivities();
-        displayActivities();
+
 
         int numberFromUser = requirePlaying();
         Play play = availableActivities[numberFromUser - 1];
         System.out.println("You choose to play: " + play.getName());
 
-    }
+        boolean noWinnerYet = true;
+        Parent.feed
 
+        //  for(Food food :availableFood){
+
+        //   if( baby.getFeelingHungry > 0){feeding
+        // atata timp cat nivelul foamei e mai mare de o, trebuie hranit copilul, apelata functia parent.feed
+        //oare e mai bine cu un if >0, <9,sau cu un for descrescator , cand ajunge la 0, copilului nu ii este foame
+
+
+    }
 
     private void initChild() {
-        Child baby = new Baby();
-        System.out.println(baby.toString());
+        Baby baby = new Baby();
+        baby.setFeelingHungry(2);
+        baby.setLevelOfMood(5);
+        System.out.println("Your baby are feeling hungry:" + baby.getFeelingHungry() + " level of mood: " + baby.getLevelOfMood());
     }
 
+
     private String initParent() {
+        Parent parent = new Parent();
+        parent.setMoneyAvailable(120);
         System.out.println("Please enter a parent name:");
         Scanner scanner = new Scanner(System.in);
         try {
@@ -42,7 +56,7 @@ public class Game {
             System.out.println("Please enter a valid String.");
             return initParent();
         }
-
+        parent.feed(baby,food);
     }
 
     private void nameBaby() {
@@ -59,6 +73,7 @@ public class Game {
         String name = scanner.nextLine();
         System.out.println("Your food name is :" + name);
         return name;
+
 
     }
 
@@ -81,18 +96,23 @@ public class Game {
 
     }
 
-    private void requireFeeding() {
+    private String requireFeeding() {
         System.out.println("Please feed the baby!");
         System.out.println("Please choose a food:");
         Scanner scanner = new Scanner(System.in);
-        int numForFood = scanner.nextInt();
-        if (numForFood == 1) {
+        String numForFood = scanner.nextLine();
+        if (numForFood == " 1 ") {
             System.out.println("the food chosen for the baby is :" + availableFood.get(0).getNameOfFood());
-        } else if (numForFood == 2) {
+        } else if (numForFood == " 2 ") {
             System.out.println("the food chosen for the baby is :" + availableFood.get(1).getNameOfFood());
         } else {
             System.out.println("You don't feed the baby!");
         }
+        return numForFood;
+        Food food=new Food();
+
+
+
     }
 
     private void initActivities() {
@@ -115,6 +135,8 @@ public class Game {
     }
 
     private int requirePlaying() {
+        initActivities();
+        displayActivities();
         System.out.println("It's time to play with the baby!");
         System.out.println("Please choose a play:");
         Scanner scanner = new Scanner(System.in);

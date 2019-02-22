@@ -9,7 +9,7 @@ public class Parent extends People {
     private boolean somebodyElseHelps;
 
 
-    public void feed(Baby baby,Food food){
+    public void feed(Baby baby, Food food){
         System.out.println( getName() + " just gave some " + food.getNameOfFood() + " food to " + baby.getName() + ".");
         int hungry = baby.getFeelingHungry();
         hungry--;
