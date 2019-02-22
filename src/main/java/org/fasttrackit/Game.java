@@ -24,7 +24,7 @@ public class Game {
         System.out.println("You choose to play: " + play.getName());
 
         boolean noWinnerYet = true;
-        Parent.feed
+
 
         //  for(Food food :availableFood){
 
