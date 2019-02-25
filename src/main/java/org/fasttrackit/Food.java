@@ -11,9 +11,11 @@ public class Food {
 
     private String nameOfFood;
 
- //   public Food(String nameOfFoodFromUser) {
- //       this.nameOfFood=nameOfFoodFromUser;
- //   }
+    public Food(String foodName) {
+        this.nameOfFood =foodName;
+    }
+
+
 
     public LocalDateTime getFoodExpirationDate() {
         return foodExpirationDate;

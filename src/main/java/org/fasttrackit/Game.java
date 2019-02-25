@@ -7,30 +7,31 @@ import java.util.Scanner;
 
 public class Game {
 
+    public Parent parent;
+    public Baby baby;
+
+
     private List<Food> availableFood = new ArrayList<>();
     private Play[] availableActivities = new Play[5];
 
     public void start() {
         initParent();
         nameBaby();
-        initChild();
-        initFood(2);
-        displayFood();
+        getNameOfFoodFromUser();
         requireFeeding();
-
 
         int numberFromUser = requirePlaying();
         Play play = availableActivities[numberFromUser - 1];
         System.out.println("You choose to play: " + play.getName());
+        parent.playing(baby,play);
 
-        boolean noWinnerYet = true;
+
+      //  boolean noWinnerYet = true;
 
 
         //  for(Food food :availableFood){
 
-        //   if( baby.getFeelingHungry > 0){feeding
-        // atata timp cat nivelul foamei e mai mare de o, trebuie hranit copilul, apelata functia parent.feed
-        //oare e mai bine cu un if >0, <9,sau cu un for descrescator , cand ajunge la 0, copilului nu ii este foame
+
 
 
     }
@@ -39,7 +40,7 @@ public class Game {
         Baby baby = new Baby();
         baby.setFeelingHungry(2);
         baby.setLevelOfMood(5);
-        System.out.println("Your baby are feeling hungry:" + baby.getFeelingHungry() + " level of mood: " + baby.getLevelOfMood());
+        //  System.out.println("Your baby are feeling hungry:" + baby.getFeelingHungry() + " level of mood: " + baby.getLevelOfMood());
     }
 
 
@@ -56,7 +57,7 @@ public class Game {
             System.out.println("Please enter a valid String.");
             return initParent();
         }
-        parent.feed(baby,food);
+
     }
 
     private void nameBaby() {
@@ -67,25 +68,25 @@ public class Game {
     }
 
 
-    private String getNameOfFoodFromUser() {
-        System.out.println("Please enter a food name:");
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-        System.out.println("Your food name is :" + name);
-        return name;
+       private String getNameOfFoodFromUser() {
+          System.out.println("Please enter a food name:");
+          Scanner scanner = new Scanner(System.in);
+         String name = scanner.nextLine();
+         System.out.println("Your food name is :" + name);
+          return name;
 
 
-    }
+      }
 
 
-    private void initFood(int countFood) {
-        for (int i = 0; i < countFood; i++) {
-            Food food = new Food();
-            food.setNameOfFood(getNameOfFoodFromUser());
-            availableFood.add(food);
-        }
+   //    private void initFood(int countFood) {
+   //       for (int i = 0; i < countFood; i++) {
+   //        Food food = new Food(food);
+   //        food.setNameOfFood(getNameOfFoodFromUser());
+    //       availableFood.add(food);
+    //       }
 
-    }
+//    }
 
     private void displayFood() {
         System.out.println("The Food available is:");
@@ -96,24 +97,33 @@ public class Game {
 
     }
 
-    private String requireFeeding() {
-        System.out.println("Please feed the baby!");
-        System.out.println("Please choose a food:");
-        Scanner scanner = new Scanner(System.in);
-        String numForFood = scanner.nextLine();
-        if (numForFood == " 1 ") {
-            System.out.println("the food chosen for the baby is :" + availableFood.get(0).getNameOfFood());
-        } else if (numForFood == " 2 ") {
-            System.out.println("the food chosen for the baby is :" + availableFood.get(1).getNameOfFood());
-        } else {
-            System.out.println("You don't feed the baby!");
-        }
-        return numForFood;
-        Food food=new Food();
-
+    private void requireFeeding() {
+        System.out.println(baby.getName() + " 's hunger level is:" + baby.getFeelingHungry() + ". Please select food.");
+        displayFood();
+        String foodName = readFoodName();
+        Food food = new Food(foodName);
+        parent.feed(baby, food);
 
 
     }
+
+    private String readFoodName() {
+        System.out.println("Please select food:");
+        Scanner scanner = new Scanner(System.in);
+        String foodName = scanner.nextLine();
+        System.out.println("Selected: " + foodName);
+        List<String> availableFoodNames = new ArrayList<>();
+        for (Food food : availableFood) {
+            availableFoodNames.add(food.getNameOfFood());
+        }
+        if (!availableFoodNames.contains(foodName)) {
+            System.out.println(foodName + " is not available as a food type in this game.");
+            return readFoodName();
+        }
+        System.out.println("The food selected is: " + foodName);
+        return foodName;
+    }
+
 
     private void initActivities() {
         Play availableActivities1 = new Play("cucu-bau");
