@@ -29,8 +29,7 @@ public class Game {
                 requirePlaying();
             }
             if (babies.get(0).getFeelingHungry() <= 2 || babies.get(0).getLevelOfMood() >= 4) {
-                requirePlaying();
-                System.out.println("Congratulations, the winer is :" + parents.get(0).getName());
+                System.out.println("Congratulations, the winner is :" + parents.get(0).getName());
                 break;
 
             } else if (babies.get(0).getFeelingHungry() > 4 && babies.get(0).getLevelOfMood() < 2) {
