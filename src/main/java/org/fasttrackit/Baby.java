@@ -5,11 +5,14 @@ public class Baby extends Child {
     private int ageInDays;
     private int howCleanIs;
     Diapers diaper;
+    private String nameBaby;
+
+    public Baby(String nameBaby) {
+        super();
+    }
 
 
-
-
-   // public Baby(Food food) {
+    // public Baby(Food food) {
    //     super(food);
 
    // }
@@ -40,4 +43,11 @@ public class Baby extends Child {
         this.howCleanIs = howCleanIs;
     }
 
+    public String getNameBaby() {
+        return nameBaby;
+    }
+
+    public void setNameBaby(String nameBaby) {
+        this.nameBaby = nameBaby;
+    }
 }

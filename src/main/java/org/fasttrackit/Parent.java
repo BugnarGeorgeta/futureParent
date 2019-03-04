@@ -2,6 +2,7 @@ package org.fasttrackit;
 
 public class Parent extends People {
 
+
     private int age;
     private boolean hasOtherChildren;
     private int energyLevel;
@@ -9,8 +10,9 @@ public class Parent extends People {
     private boolean somebodyElseHelps;
 
 
+
     public void feed(Baby baby, Food food){
-        System.out.println( getName() + " just gave some " + food.getNameOfFood() + " food to " + baby.getName() + ".");
+        System.out.println(getName() + " just gave some " + food.getNameOfFood() + " food to " +  " baby.");
         int hungry = baby.getFeelingHungry();
         hungry--;
         System.out.println("Now the level of hungry is: " + hungry);
@@ -23,7 +25,7 @@ public class Parent extends People {
     }
 
     public void playing(Baby baby,Play play) {
-        System.out.println(getName() + " just played " + play.getName() + " with " + baby.getName() + ".");
+        System.out.println(getName() + " just played " + play.getName() + " with " + " the baby.");
         int mood = baby.getLevelOfMood();
 
         if (play.getName() == baby.getFavoriteGame()) {
@@ -75,6 +77,8 @@ public class Parent extends People {
     public void setSomebodyElseHelps(boolean somebodyElseHelps) {
         this.somebodyElseHelps = somebodyElseHelps;
     }
+
+
 
 
 }
