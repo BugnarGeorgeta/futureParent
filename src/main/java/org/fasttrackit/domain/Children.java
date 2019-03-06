@@ -1,38 +1,23 @@
-package org.fasttrackit;
+package org.fasttrackit.domain;
 
-import org.fasttrackit.service.ChildrenService;
+public class Children {
 
-public class Child extends People {
-
+    private long id;
     private int levelOfMood;
     private int healthCondition;
     private String favoriteGame;
     private int feelingHungry;
     private String favoriteFood;
 
-    public Food food;
-    public Play play;
 
-    private ChildrenService childrenService =new ChildrenService();
 
-   //public Child(Food food){
-   //     this.food = food;
-  //  }
-  //  public Child(Play play){
-  //      this.play = play;
-   // }
 
-    public void mood(){
-        System.out.println("The child is happy.");
+    public long getId() {
+        return id;
     }
 
-
-    public int getLevelOfMood() {
-        return levelOfMood;
-    }
-
-    public void setLevelOfMood(int levelOfMood) {
-        this.levelOfMood = levelOfMood;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public int getHealthCondition() {
@@ -43,20 +28,20 @@ public class Child extends People {
         this.healthCondition = healthCondition;
     }
 
-    public int getFeelingHungry() {
-        return feelingHungry;
-    }
-
-    public void setFeelingHungry(int feelingHungry) {
-        this.feelingHungry = feelingHungry;
-    }
-
     public String getFavoriteGame() {
         return favoriteGame;
     }
 
     public void setFavoriteGame(String favoriteGame) {
         this.favoriteGame = favoriteGame;
+    }
+
+    public int getFeelingHungry() {
+        return feelingHungry;
+    }
+
+    public void setFeelingHungry(int feelingHungry) {
+        this.feelingHungry = feelingHungry;
     }
 
     public String getFavoriteFood() {
@@ -67,15 +52,26 @@ public class Child extends People {
         this.favoriteFood = favoriteFood;
     }
 
+    public int getLevelOfMood() {
+        return levelOfMood;
+    }
+
+    public void setLevelOfMood(int levelOfMood) {
+        this.levelOfMood = levelOfMood;
+    }
+
     @Override
     public String toString() {
-        return "Child{" +
-                "levelOfMood=" + levelOfMood +
+        return "Children{" +
+                "id=" + id +
+                ", levelOfMood=" + levelOfMood +
                 ", healthCondition=" + healthCondition +
                 ", favoriteGame='" + favoriteGame + '\'' +
-                ", food=" + food +
-                ", play=" + play +
+                ", feelingHungry=" + feelingHungry +
+                ", favoriteFood='" + favoriteFood + '\'' +
                 '}';
     }
 }
+
+
 

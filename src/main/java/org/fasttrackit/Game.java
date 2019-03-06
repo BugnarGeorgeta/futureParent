@@ -1,5 +1,8 @@
 package org.fasttrackit;
 
+import org.fasttrackit.domain.Children;
+import org.fasttrackit.service.ChildrenService;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -8,13 +11,14 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
 
+
     private Play[] availableActivities = new Play[5];
     private Food[] availableFood = new Food[4];
     private List<Parent> parents = new ArrayList<>();
     private List<Baby> babies = new ArrayList<>();
+    private ChildrenService childrenService = new ChildrenService();
 
-
-    public void start() {
+    public void start() throws Exception {
         initParent();
         initChild();
         initFood();
@@ -30,6 +34,15 @@ public class Game {
             }
             if (babies.get(0).getFeelingHungry() <= 2 || babies.get(0).getLevelOfMood() >= 4) {
                 System.out.println("Congratulations, the winner is :" + parents.get(0).getName());
+
+                Children children =new Children();
+                children.setFavoriteFood("milk");
+                children.setFavoriteGame("cucu-bau");
+                children.setFeelingHungry(1);
+                children.setHealthCondition(5);
+                children.setLevelOfMood(5);
+                childrenService.createChildren(children);
+
                 break;
 
             } else if (babies.get(0).getFeelingHungry() > 4 && babies.get(0).getLevelOfMood() < 2) {
@@ -47,6 +60,7 @@ public class Game {
         baby.setLevelOfMood(ThreadLocalRandom.current().nextInt(1, 5));
         baby.setFavoriteFood("mango");
         baby.setFavoriteGame("cucu-bau");
+        baby.setHealthCondition(5);
         babies.add(baby);
 
     }
