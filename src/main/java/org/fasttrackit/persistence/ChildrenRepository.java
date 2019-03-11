@@ -11,7 +11,7 @@ public class ChildrenRepository {
 
     public void createChildren(Children children)throws ClassNotFoundException, IOException, SQLException {
         Connection connection=DatabaseConfiguration.getConnection();
-        String insertSql = "INSERT INTO future_parent(levelOfMood, healthCondition, favoriteGame, feelingHungry, favoriteFood) VALUES (?,?,?,?,?)";
+        String insertSql = "INSERT INTO children(levelOfMood, healthCondition, favoriteGame, feelingHungry, favoriteFood) VALUES (?,?,?,?,?)";
         PreparedStatement preparedStatement =connection.prepareStatement(insertSql);
 
         preparedStatement.setInt(1,children.getLevelOfMood());
